@@ -9,4 +9,4 @@ IMAGENAME=${NAME}:${TAG}
 docker build -t ${IMAGENAME} .
 
 # Push
-docker push ${IMAGE}:${TAG}
+docker push ${IMAGENAME}
