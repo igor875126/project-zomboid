@@ -6,7 +6,7 @@ NAME=igor875126/project-zomboid
 IMAGENAME=${NAME}:${TAG}
 
 # Build docker image
-docker build -t ${IMAGENAME} -f docker/Dockerfile .
+docker build -t ${IMAGENAME} .
 
 # Push
 docker push ${IMAGE}:${TAG}
