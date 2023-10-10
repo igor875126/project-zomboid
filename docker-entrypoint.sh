@@ -9,7 +9,7 @@ else
     steamcmd +login anonymous +force_install_dir /root/ProjectZomboidServer +app_update 380870 validate +quit
 
     # Change server allowed ram usage
-    sed -i sed "s|-Xmx[0-9]*g|-Xmx${ALLOWED_RAM_IN_GB}g|g" /root/ProjectZomboidServer/ProjectZomboid64.json
+    sed -i "s|-Xmx[0-9]*g|-Xmx${ALLOWED_RAM_IN_GB}g|g" /root/ProjectZomboidServer/ProjectZomboid64.json
 
     # Change garbage collector to another type
     sed -i "s|UseZGC|UseG1GC|g" /root/ProjectZomboidServer/ProjectZomboid64.json
