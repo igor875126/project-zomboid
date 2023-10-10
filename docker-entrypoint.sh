@@ -15,5 +15,5 @@ else
     sed -i "s|UseZGC|UseG1GC|g" /root/ProjectZomboidServer/ProjectZomboid64.json
 
     # Start the server
-    /root/start-server.sh -servername ${SERVER_NAME} -adminpassword ${ADMIN_PASSWORD} -steamport1 8766 -steamport2 8767
+    /root/ProjectZomboidServer/start-server.sh -servername ${SERVER_NAME} -adminpassword ${ADMIN_PASSWORD} -steamport1 8766 -steamport2 8767
 fi
