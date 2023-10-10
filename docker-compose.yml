@@ -2,9 +2,6 @@ version: "3.5"
 services:
   app:
     image: igor875126/project-zomboid:latest
-    build:
-      dockerfile: "Dockerfile"
-      context: .
     container_name: project-zomboid
     restart: unless-stopped
     ports:
