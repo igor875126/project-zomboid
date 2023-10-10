@@ -2,7 +2,7 @@
 
 # Variables
 TAG=latest
-NAME=igor875126/project-zomboid
+NAME=docker.io/igor875126/project-zomboid
 IMAGENAME=${NAME}:${TAG}
 
 # Build docker image
