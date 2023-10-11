@@ -27,7 +27,9 @@ Server configuration can be adjusted to tailor your gaming experience.
 
 ### Main Configuration File
 Modify server parameters in the main configuration file.
-- Path: `./server-configs/ZomboidDocker.ini`
+- Path: `./server-configs/Server/ZomboidDocker.ini`
+> Please note `ZomboidDocker` depends on SERVER_NAME environment variable in your docker-compose.yml
+
 - Parameters: Mods, server password, description, PVP options, and more.
 
 ### Initial Configuration
@@ -40,6 +42,13 @@ Modify server parameters in the main configuration file.
 
 ## Firewall Configuration
 To ensure players can access your server, verify that the necessary ports are open on your firewall. Check `docker-compose.yml` or the documentation to confirm which ports need to be configured.
+
+## Server administration
+After you started the server with `docker-compose up -d` you now can connect to the rcon (Server Admin CLI):
+
+```shell
+`docker-compose exec app rcon`
+```
 
 ## Additional Information
 Refer to the Project Zomboid and Docker documentation for more advanced server configurations, including:

@@ -14,7 +14,7 @@ services:
     volumes:
       - "./steam:/root/Steam"
       - "./server-files:/root/ProjectZomboidServer"
-      - "./server-configs:/root/Zomboid/Server"
+      - "./server-configs:/root/Zomboid"
     environment: 
       - SERVER_NAME=ZomboidDocker
       - ADMIN_PASSWORD=Zomboid20232023
