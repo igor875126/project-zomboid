@@ -3,19 +3,8 @@ set -e
 
 if [ $# -gt 0 ]
 then
-    if [ "$1" = "rcon" ]; then
-        # Extract RCON Port
-        RCON_PORT=$(grep "^RCONPort=" /root/Zomboid/Server/${SERVER_NAME}.ini | cut -d'=' -f2)
-
-        # Extract RCON Password
-        RCON_PASSWORD=$(grep "^RCONPassword=" /root/Zomboid/Server/${SERVER_NAME}.ini | cut -d'=' -f2)
-
-        # Run RCON
-        ${RCON_PATH}/rcon --address 127.0.0.1:${RCON_PORT} --password ${RCON_PASSWORD}
-    else
-        # Execute what user wants
-        exec "$@"
-    fi
+    # Execute what user wants
+    exec "$@"
 else
     # Every time the server starts try to update the Project Zomboid Server
     steamcmd +login anonymous +force_install_dir /root/ProjectZomboidServer +app_update 380870 validate +quit

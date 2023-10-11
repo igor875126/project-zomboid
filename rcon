@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Extract RCON Port
+RCON_PORT=$(grep "^RCONPort=" /root/Zomboid/Server/${SERVER_NAME}.ini | cut -d'=' -f2)
+
+# Extract RCON Password
+RCON_PASSWORD=$(grep "^RCONPassword=" /root/Zomboid/Server/${SERVER_NAME}.ini | cut -d'=' -f2)
+
+# Run RCON
+${RCON_PATH}/rcon --address 127.0.0.1:${RCON_PORT} --password ${RCON_PASSWORD}

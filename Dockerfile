@@ -15,11 +15,14 @@ RUN cd /root && \
     tar xvf $RCON_ARCHIVE_NAME && \
     rm -r $RCON_ARCHIVE_NAME
 
+# Copy rcon shell script
+COPY ./rcon /usr/local/sbin/rcon
+
 # Copy docker entrypoint
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
 # Permissions
-RUN chmod +x /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh /usr/local/sbin/rcon
 
 # Entrypoint
 ENTRYPOINT ["/docker-entrypoint.sh"]
