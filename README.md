@@ -67,6 +67,12 @@ For more advanced server configurations, refer to the Project Zomboid and Docker
 - Locate the line: `WorkshopItems=`. Insert mod ids here, e.g., `WorkshopItems=2169435993;2368058459;2216760107;...`.
 > Ensure the order of the mod names and workshop items is maintained!
 
+## How to reset the "world"
+- Stop the server `docker-compose down` or `docker-compose exec app rcon` `quit`
+- Navigate to `./server-configs/Saves/Multiplayer/`
+- Delete folder `${SERVER_NAME}`, e.g. `ZomboidDocker`
+- Start the server `docker-compose up -d`
+
 ## Support & Contribution
 For support, please open an issue. If you’d like to contribute enhancements, we welcome pull requests to share with the community.
 
